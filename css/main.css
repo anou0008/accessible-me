@@ -1,8 +1,14 @@
 body {
   font-family: 'Roboto', Helvetica, sans-serif;
-  background-color: grey;
+  background-color: #f2f4f3;
   margin: 0;
   padding: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
 
 h1,
@@ -20,8 +26,11 @@ h6 {
   padding: 0 1rem;
 }
 
-img {
-  width: 100%;
+.banner {
+  display: block;
+  width: 80%;
+  max-width: 760px;
+  margin: 0 auto;
 }
 
 .main-nav ul {
@@ -68,4 +77,31 @@ form button {
 
 .site-footer {
   padding: 2rem 0;
+}
+
+.skip-link {
+  position: absolute;
+  top: -999px;
+  left: -999px;
+  background: #000;
+  color: #fff;
+  padding: 8px 16px;
+  z-index: 999;
+}
+
+.skip-link:focus {
+  top: 0;
+  left: 0;
+}
+
+a:focus,
+button:focus,
+input:focus,
+textarea:focus {
+  outline: 3px solid #000;
+  outline-offset: 3px;
+}
+
+body {
+  color: #222;
 }
